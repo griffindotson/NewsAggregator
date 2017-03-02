@@ -44,18 +44,27 @@ nav li {
     float:left;
     margin:0 15px 0 0;
 }
-
+.category ul {
+    margin:15px 0 15px 30px;
+}
+ul img {
+    height:100px;
+    float:left;
+    margin:0 10px 10px 20px;
+}
 /*--------------------body elements-----*/
 h1, h2, h3, p, small {
     clear:both;
     margin:20px;
 }
-body > ul {
-    margin:15px 0 15px 30px;
-    list-style-type: none;
+hr {
+    margin:15px;
 }
 body > ol {
     margin:15px 0 15px 30px;
+}
+ul {
+    list-style-type: none;
 }
 
 /*--------------------------------links-----*/
