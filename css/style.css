@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*---------------------------------body-----*/
+
+body {
+    width:960px;
+    margin:0 auto;
+}
+
+/*---------------------------------nav-----*/
+
+nav {
+	height:3em;
+	background-color:#252525;
+    opacity:.7;
+    line-height:50px;
+    border-radius:0 0 5px 5px;
+}
+nav ul {
+    text-align:center;
+}
+nav li {
+    margin:auto 15px;
+    display:inline;
+    font-family:'latohairline';
+    font-size:.85em;
+    float:left;
+}
+
+/*----------------------------divs-----*/
+
+.category {
+    padding:50px 0 15px 0;
+}
+.category img {
+    height:100px;
+    float:left;
+    margin:0 15px 0 0;
+}
+
+/*--------------------body elements-----*/
+h1, h2, h3, p, small {
+    clear:both;
+    margin:20px;
+}
+body > ul {
+    margin:15px 0 15px 30px;
+    list-style-type: none;
+}
+body > ol {
+    margin:15px 0 15px 30px;
+}
+
+/*--------------------------------links-----*/
+
+a:link {
+	color:#252525;
+}
+a:visited {
+	color:#ccc;
+}
+a:hover {
+	color:#ccc;
+}
+nav a:link, a:visited {
+    color:#fff;
+}
+nav a:hover {
+    color:#ccc;
+}
+
