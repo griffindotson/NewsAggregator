@@ -9,7 +9,7 @@ class Category {
 
 //constructor
 public function __construct($id, $name, $description) {
-$this->categoryID = $id;
+$this->categoryID = (int)$id;
 $this->categoryName = $name;
 $this->categoryDescription = $description;
 $this->subcategoriesURL = "subcategories_list.php/?id=$this->categoryID";
