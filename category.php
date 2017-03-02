@@ -7,29 +7,28 @@ class Category {
     public $categoryDescription = '';
     public $subcategoriesURL = '';
 
-    //constructor
-    public function __construct($id, $name, $description) {
-    $this->categoryID = $id;
-    $this->categoryName = $name;
-    $this->categoryDescription = $description;
-    $this->setProperties($this->categoryName);
-    }//end constructor
+//constructor
+public function __construct($id, $name, $description) {
+$this->categoryID = (int)$id;
+$this->categoryName = $name;
+$this->categoryDescription = $description;
+$this->subcategoriesURL = "subcategories_list.php/?id=$this->categoryID";
+$this->setImages($this->categoryName);
 
-    private function setProperties($name) {
-        switch($name) {
-            case "Health":
-            $this->categoryImage = "images/health.jpg";
-            $this->subcategoriesURL = "";
-            break;
-            case "Technology":
-            $this->categoryImage = "";
-            $this->subcategoriesURL = "";
-            break;
-            case "Environment":
-            $this->categoryImage = "";
-            $this->subcategoriesURL = "";
-            break;
-        }//end switch
-    }//end setProperties
+}//end of Category constructor
 
-}end class
+private function setImages($name) {
+    switch($name) {
+        case "Health":
+        $this->categoryImage = "images/health.jpeg";
+        break;
+        case "Technology":
+        $this->categoryImage = "images/technology.jpeg";
+        break;
+        case "Environment":
+        $this->categoryImage = "images/environment.jpeg";
+        break;
+    }//end of switch
+}//end of setImages function 
+
+}//end of Category class

@@ -1,5 +1,7 @@
 <?php
 
+//provide credentials to connect with the database
+require 'credentials.php';
 //IDB class definition
 
 class IDB 
@@ -33,3 +35,10 @@ function getCategoryData() {
     $result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
     return $result;    
 }//end getCategoryData
+
+function getSubcategoryData($catID) {
+	$sql = "SELECT * FROM subcategories
+			WHERE CategoryID = $catID";
+    $result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
+    return $result; 
+}//end getSubcategoryData
