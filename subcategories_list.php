@@ -25,7 +25,7 @@ if(mysqli_num_rows($result) > 0) {
                 <h2>' . $subcategory->subcategoryName . '</h2>
                 <img src="' . $subcategory->subcategoryImage . '" alt="">
                 <p>' . $subcategory->subcategoryDescription . '</p>
-                <a href="' . $subcategory->subcategoryRSS . '">Read news</a>
+                <a href="' . '../feed.php/?rss=' . $subcategory->subcategoryRSS . '">Read news</a>
               </div>';
     }//end of foreach loop
 
@@ -34,3 +34,4 @@ else
 {
     //what should happen if we don't have data in the db?
 }
+
