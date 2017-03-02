@@ -12,22 +12,21 @@ public function __construct($id, $name, $description) {
 $this->categoryID = $id;
 $this->categoryName = $name;
 $this->categoryDescription = $description;
-$this->setProperties($this->categoryName);
+$this->subcategoriesURL = "subcategories_list.php/?id=$this->categoryID";
+$this->setImages($this->categoryName);
+
 }
 
-private function setProperties($name) {
+private function setImages($name) {
     switch($name) {
         case "Health":
-        $this->categoryImage = "images/health.jpg";
-        $this->subcategoriesURL = "";
+        $this->categoryImage = "images/health.jpeg";
         break;
         case "Technology":
-        $this->categoryImage = "";
-        $this->subcategoriesURL = "";
+        $this->categoryImage = "images/technology.jpeg";
         break;
         case "Environment":
-        $this->categoryImage = "";
-        $this->subcategoriesURL = "";
+        $this->categoryImage = "images/environment.jpeg";
         break;
     }
 }
