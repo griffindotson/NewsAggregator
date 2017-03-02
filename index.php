@@ -1,7 +1,4 @@
 <?php
-
-//provide credentials to connect with the database
-require "config/credentials.php";
 //common classes and functions (IDB and getCategoryData)
 require "config/common.php";
 //Category class
@@ -32,3 +29,7 @@ if(mysqli_num_rows($result) > 0) {
     }//end of foreach loop
 
 }//end of if block
+else
+{
+    //what should happen if we don't have data in the db?
+}
