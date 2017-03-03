@@ -34,7 +34,7 @@ div {
 /*--------------------body elements-----*/
 h1, h2, h3, small {
     clear:both;
-    margin:20px;
+    margin:20px 0;
 }
 
 header h2 {
