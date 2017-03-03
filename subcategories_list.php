@@ -39,7 +39,7 @@ if(mysqli_num_rows($result) > 0) {
         echo '<div>
                 <h2>' . $subcategory->subcategoryName . '</h2>
                 <a href=' . '../feed.php/?rss=' . $subcategory->subcategoryRSS . '><img src="' . $subcategory->subcategoryImage . '" alt=""></a>
-                <p>' . $subcategory->subcategoryDescription . '
+                <p>' . $subcategory->subcategoryDescription . '<br>
                 <strong><a href=' . '../feed.php/?rss=' . $subcategory->subcategoryRSS . '>Go to ' . $subcategory->subcategoryName . ' news feeds</a></strong></p>
               </div>';
     }//end of foreach loop
