@@ -53,8 +53,12 @@ ul img {
     margin:0 10px 10px 20px;
 }
 /*--------------------body elements-----*/
-h1, h2, h3, p, small {
+h1, h2, h3, small {
     clear:both;
+    margin:20px;
+}
+p {
+    float:right;
     margin:20px;
 }
 hr {
@@ -69,19 +73,18 @@ ul {
 
 /*--------------------------------links-----*/
 
-a:link {
+a:link, a:visited {
 	color:#252525;
-}
-a:visited {
-	color:#ccc;
 }
 a:hover {
 	color:#ccc;
 }
-nav a:link, a:visited {
+nav a:link {
     color:#fff;
 }
 nav a:hover {
     color:#ccc;
 }
-
+nav a:visited {
+    color:#ccc;
+}
