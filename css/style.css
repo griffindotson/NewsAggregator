@@ -27,6 +27,7 @@ header {
 div {
     padding-bottom: 70px;
     border-bottom: 1px solid grey;
+    overflow: auto;
 }
 
 
