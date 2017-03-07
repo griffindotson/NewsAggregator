@@ -20,7 +20,7 @@ date_default_timezone_set('America/Los_Angeles');
 <?php
     
   $request = $_GET['rss'];
-  $time = date("h:i:sa");
+  $time = date("m/d/y h:i:sa");
     
   if (array_key_exists($request,$_SESSION['feeds']) == FALSE 
       || strtotime($time) - strtotime($_SESSION['feeds'][$request][1]) >= 600 )
@@ -35,7 +35,8 @@ date_default_timezone_set('America/Los_Angeles');
     
   echo '<h1>' . $page->channel->title . '</h1>
         </header>';
-  
+  echo '<h2>Feeds refreshed every 10 minutes. Last refreshed at: ' .  $_SESSION['feeds'][$request][1] . '</h2>';
+    
 
   //the images are not showing because they are under a namespace "media".
   //get an array of namespace prefixes with their associated URIs.
