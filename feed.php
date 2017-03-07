@@ -1,4 +1,5 @@
 <?php
+//starts session
 session_start();
 $_SESSION['feeds'] = array();
 date_default_timezone_set('America/Los_Angeles');
@@ -19,16 +20,18 @@ date_default_timezone_set('America/Los_Angeles');
    
 <?php
     
-  $request = $_GET['rss'];
-  $time = date("h:i:sa");
-    
+  $request = $_GET['rss']; //Gets the desired rss feed
+  $time = date("h:i:sa"); //Gets current time
+  
+  //Check if session is stored or if it should be overwritten  
   if (array_key_exists($request,$_SESSION['feeds']) == FALSE 
-      || strtotime($time) - strtotime($_SESSION['feeds'][$request][1]) >=  ){//!!!! ADD Comparative Calculation !!!!
+      || strtotime($time) - strtotime($_SESSION['feeds'][$request][1]) >= 600 ){
       $response = file_get_contents($request); 
       $xml = simplexml_load_string($response);
-      $_SESSION['feeds'][$request] = array($xml,$time);
+      $_SESSION['feeds'][$request] = array($xml,$time); //Multidimenisonal array using rss as keys
   }
   
+  //gets xml document  
   $page = $_SESSION['feeds'][$request][0];
   
     
